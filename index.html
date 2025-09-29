@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lyra Virtual Assistant</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="text/javascript" src="/eel.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="light">
+  <header>
+    <h1>🧠 LYRA Assistant</h1>
+    <button id="themeToggle">🌙 Dark Mode</button>
+  </header>
+
+  <div class="chat-box" id="chat"></div>
+
+
+  <div class="input-box">
+    <input type="text" id="commandInput" placeholder="Type your message...">
+    <button onclick="sendCommand()">Send</button>
+    <button id="micBtn" onclick="startListening()">🎤</button>
+    <span class="toggle" onclick="toggleWakeWord()">Wake-word: <strong id="wakeText">On</strong></span>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

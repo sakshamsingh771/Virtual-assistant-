@@ -1,0 +1,107 @@
+:root {
+  --bg-light: #f0f0f0;
+  --card-light: #ffffff;
+  --text-light: #222222;
+
+  --bg-dark: #0f172a;
+  --card-dark: #1e293b;
+  --text-dark: #ffffff;
+
+  --user: #3b82f6;
+  --bot: #64748b;
+  --accent: #3b82f6;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body.light { background: var(--bg-light); color: var(--text-light); }
+body.dark { background: var(--bg-dark); color: var(--text-dark); }
+
+header {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+header h1 { font-size: 1.6em; }
+header button { padding: 6px 12px; cursor: pointer; border-radius: 8px; border: none; background: var(--accent); color: #fff; }
+
+.chat-box {
+  width: 100%;
+  max-width: 700px;
+  background: var(--card-dark);
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  min-height: 50vh;
+  margin-bottom: 10px;
+}
+body.light .chat-box { background: var(--card-light); }
+
+.message {
+  margin: 6px 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 75%;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+.user { background: var(--user); align-self: flex-end; color: #fff; }
+.bot { background: var(--bot); align-self: flex-start; color: #fff; }
+
+.input-box {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.input-box button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  min-width: 50px;
+}
+.input-box button:hover { background: #2563eb; }
+#micBtn { background: #ef4444; }
+#micBtn.listening { background: #22c55e; }
+
+.toggle {
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--accent);
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 1.2em; }
+  .input-box input, .input-box button { font-size: 14px; padding: 10px; }
+  .message { font-size: 14px; }
+}
